@@ -3,7 +3,7 @@
 #include <signal.h>
 #include <stdlib.h>
 
-void sigend(int x)
+static __attribute__((noreturn)) void quit(int x)
 {
 	(void)x;
 	endwin();
@@ -18,10 +18,10 @@ int main()
 	cbreak();
 	keypad(stdscr, true);
 	noecho();
-	signal(SIGINT, sigend);
-	signal(SIGTERM, sigend);
-	signal(SIGABRT, sigend);
-	signal(SIGSEGV, sigend);
+	signal(SIGINT, quit);
+	signal(SIGTERM, quit);
+	signal(SIGABRT, quit);
+	signal(SIGSEGV, quit);
 	char c = 0;
 	while (c != 'q') {
 		struct snake_screen screen;
@@ -43,6 +43,5 @@ int main()
 		default: continue;
 		}
 	}
-	endwin();
-	return 0;
+	quit(0);
 }
