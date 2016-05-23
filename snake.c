@@ -31,29 +31,29 @@ static void gridline_v(struct snake_state *ss, int x, int y1, int y2, int dy)
 	}
 }
 
-static const int x0 = 0;
-static const int x100 = SNAKE_W;
-static const int x50 = SNAKE_W / 2;
-static const int x33 = SNAKE_W / 3;
-static const int x67 = (SNAKE_W * 2) / 3;
-static const int x25 = SNAKE_W / 4;
-static const int x75 = (SNAKE_W * 3) / 4;
-static const int x20 = SNAKE_W / 5;
-static const int x40 = (SNAKE_W * 2) / 5;
-static const int x60 = (SNAKE_W * 3) / 5;
-static const int x80 = (SNAKE_W * 4) / 5;
+#define x0 (0)
+#define x100 (SNAKE_W - 1)
+#define x50 (SNAKE_W / 2)
+#define x33 (SNAKE_W / 3)
+#define x67 ((SNAKE_W * 2) / 3)
+#define x25 (SNAKE_W / 4)
+#define x75 ((SNAKE_W * 3) / 4)
+#define x20 (SNAKE_W / 5)
+#define x40 ((SNAKE_W * 2) / 5)
+#define x60 ((SNAKE_W * 3) / 5)
+#define x80 ((SNAKE_W * 4) / 5)
 
-static const int y0 = 0;
-static const int y100 = SNAKE_H;
-static const int y50 = SNAKE_H / 2;
-static const int y33 = SNAKE_H / 3;
-static const int y67 = (SNAKE_H * 2) / 3;
-static const int y25 = SNAKE_H / 4;
-static const int y75 = (SNAKE_H * 3) / 4;
-static const int y20 = SNAKE_H / 5;
-static const int y40 = (SNAKE_H * 2) / 5;
-static const int y60 = (SNAKE_H * 3) / 5;
-static const int y80 = (SNAKE_H * 4) / 5;
+#define y0 (0)
+#define y100 (SNAKE_H - 1)
+#define y50 (SNAKE_H / 2)
+#define y33 (SNAKE_H / 3)
+#define y67 ((SNAKE_H * 2) / 3)
+#define y25 (SNAKE_H / 4)
+#define y75 ((SNAKE_H * 3) / 4)
+#define y20 (SNAKE_H / 5)
+#define y40 ((SNAKE_H * 2) / 5)
+#define y60 ((SNAKE_H * 3) / 5)
+#define y80 ((SNAKE_H * 4) / 5)
 
 static void init_level(struct snake_state *ss, enum snake_level level)
 {
