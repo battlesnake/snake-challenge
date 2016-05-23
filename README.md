@@ -116,8 +116,15 @@ If no width and/or height is specified, default to the initial values (w/h = 40/
 Objective: Range-checking.
 
 Recall the game **Pacman**, where the player can exit the screen on one side and appear on the other side.
+
+Since the game state doesn't include the border columns/rows (they are assumed to be all-block in the original game), you will need to change:
+
+ * the renderer so that it does not draw blocks around the game grid.
+
+ * the level generator, so that it generates a border within the game state itself.
+
+For the first level (initially an empty grid), the holes must be alternating.
 Add holes to the vertical (left/right) walls, such that the snake can "wrap" across the screen like Pacman.
-The holes must be alternating:
 
 	oooooooooo
 
@@ -129,13 +136,29 @@ The holes must be alternating:
 
 	o        o
 	oooooooooo
+
+If the snake was marked with `x` instead of `o`, then the wrapping would look like this:
+
+	oooooooooo
+
+	o      x o
+	xxx    xxx
+	o x      o
+	xxx   xxx
+	o     x  o
+	   xxxx
+	o        o
+	oooooooooo
+
+For levels after the first level, you may implement whatever patterns you want, and also change the levels.
+Show off your creativity by re-designing the higher game levels!
 
 ## Challenge 7: User-friendly
 
 Objective: Demonstrate understanding of basic UNIX, including fork/dup2/pipe.
 
 Users are lazy and don't read instructions.
-Link both your client and server into one executable which when run, uses `fork` to split into separate client and server processes that automatically connect *via pipes*
+Link both your client and server into one executable which when run, uses `fork` to split into separate client and server processes that automatically connect *via pipes*.
 When the game ends, both processes must exit.
 The server shall receive packets via standard input and respond via standard output, so you will probably need to use `dup2` or `dup3` BEFORE forking the server, and probably figure out a way to define packet boundaries (e.g. escape codes or prefixing each packet with its length).
 When the game is started, the pipe/dup/fork must all happen automatically with no extra input required, so that the user can start playing the game on their desired grid size.
