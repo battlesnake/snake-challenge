@@ -54,7 +54,7 @@ If you need to move a tag, use the `-f` option:
 	# Tag points to previous commit, move it
 	git tag -f label
 
-When complete, tar your working directory (including the hiden `.git` folder), and email it to [mark@open-cosmos.com](mailto:mark@open-cosmos.com) with the title "Snake challenge".
+When complete, tar your working directory (including the hidden `.git` folder), and email it to [mark@open-cosmos.com](mailto:mark@open-cosmos.com) with the title "Snake challenge".
 
 ## Challenge 1: Client server
 
@@ -206,4 +206,4 @@ Don't try to cheat e.g. by moving all the code into another binary/dynamic-libra
 
 I don't know if this challenge is possible, remember it is *optional* and not assessed!
 
-When complete, commit to the demoscene branch and tag the commit as "only-4k", then push.
+When complete, commit to the demoscene branch and tag the commit as "only-4k".
