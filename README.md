@@ -11,6 +11,20 @@ _Other people's code_ is by definition _bad code_.
 
 This challenge requires you to maintain some of my undocumented & uncommented C code, and to cleanly add functionality to it.
 
+You do not need to complete all of the challenges, try to do as many as you can.
+Optimise for clarity/readability first, don't try to be too clever with speed/size hacks.
+
+## Downloading and running
+
+The challenge is hosted on Github at [github.com:battlesnake/snake-challenge](https://github.com/battlesnake/snake-challenge):
+
+	git clone https://github.com/battlesnake/snake-challenge
+	cd snake-challenge
+	make
+	./snake
+
+Feel free to fork it, but do not push your changes back to Github!  We don't want other challengers copying your code ;)
+
 **Snake** is a single-player turn-based game inspired by **NIBBLES**, which was a demo program provided with Microsoft QuickBASIC 4.5.
 It is similar to the "snake" game on old Nokia phones.
 
@@ -30,33 +44,17 @@ After each challenge, COMMIT your changes then tag the commit with the challenge
 
 You do not need to squash each challenge down to one commit, use tags instead.
 
-After pushing, do another push with the `--tags` flag, to push your tags.
-
-	git push
-	git push --tags
-	
 If you need to move a tag, use the `-f` option:
 
 	git tag label
-	git push
-	git push --tags
+
 	# Oops, forgot to commit
 	git commit
+
 	# Tag points to previous commit, move it
 	git tag -f tags
-	git push
-	git push -f --tags
 
-Your code must compile with GCC's `-std=gnu99` standard.
-
-## Downloading and running
-
-The challenge is hosted on Github:
-
-	git clone git@github.com:battlesnake/snake-challenge
-	cd snake-challenge
-	make
-	./snake
+When complete, tar your working directory (including the hiden `.git` folder), and email it to [mark@open-cosmos.com](mailto:mark@open-cosmos.com) with the title "Snake challenge".
 
 ## Challenge 1: Client server
 
