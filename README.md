@@ -1,6 +1,12 @@
 Snake challenge
 ===============
 
+Pre-requisites: C, Linux, Git
+
+This project is set up to build using GNU Make v4.0+, however you can use a different build system provided you use the following flags for GCC/Clang:
+
+	-std=gnu99 -Wall -Wextra -pedantic -Werror
+
 _Other people's code_ is by definition _bad code_.
 
 This challenge requires you to maintain some of my undocumented & uncommented C code, and to cleanly add functionality to it.
