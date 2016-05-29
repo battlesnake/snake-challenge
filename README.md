@@ -52,7 +52,7 @@ If you need to move a tag, use the `-f` option:
 	git commit
 
 	# Tag points to previous commit, move it
-	git tag -f tags
+	git tag -f label
 
 When complete, tar your working directory (including the hiden `.git` folder), and email it to [mark@open-cosmos.com](mailto:mark@open-cosmos.com) with the title "Snake challenge".
 
