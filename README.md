@@ -30,6 +30,23 @@ After each challenge, COMMIT your changes then tag the commit with the challenge
 
 You do not need to squash each challenge down to one commit, use tags instead.
 
+After pushing, do another push with the `--tags` flag, to push your tags.
+
+	git push
+	git push --tags
+	
+If you need to move a tag, use the `-f` option:
+
+	git tag label
+	git push
+	git push --tags
+	# Oops, forgot to commit
+	git commit
+	# Tag points to previous commit, move it
+	git tag -f tags
+	git push
+	git push -f --tags
+
 Your code must compile with GCC's `-std=gnu99` standard.
 
 ## Downloading and running
